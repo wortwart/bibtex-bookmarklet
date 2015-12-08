@@ -1,0 +1,112 @@
+#bibTexBookmarklet {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 250px;
+	max-height: 90vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 3.5px 14.5px;
+	font-family: Arial, Helvetica;
+	font-size: 14px;
+	line-height: 16.5px;
+	text-align: left;
+	background: #A1CA59 linear-gradient(to bottom, #A1CA59, #6FAD01);
+	border-radius: 4px;
+	box-shadow: .5em .5em .5em grey;
+	z-index: 226000;
+}
+
+#bibTexBookmarklet p {
+	margin-bottom: .25em;
+}
+
+#bibTexBookmarklet hr {
+	margin: .5em;
+}
+
+#bibTexBookmarklet h3 {
+	margin: .75em 0 .25em;
+}
+
+#bibTexBookmarklet input,
+#bibTexBookmarklet textarea {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	margin: .5em 0;
+	padding: .25em;
+	font-family: Arial, Helvetica;
+}
+
+#bibTexBookmarklet button, #bibTexBookmarklet input[type=submit] {
+	box-sizing: border-box;
+	overflow: hidden;
+	height: 21.2px;
+  padding: 3px 5px;
+  border: none;
+  border-radius: 4px;
+  line-height: 1em;
+	font-size: 13px;
+ 	background: #6BA1EF linear-gradient(to bottom, #6BA1EF, #357FE9);
+	color: #fff;
+}
+
+#bibTexBookmarklet button:hover, #bibTexBookmarklet input[type=submit]:hover {
+	background: #fff;
+  color: #357fe9;
+}
+
+#bibTexBookmarkletButtons {
+	position: relative;
+}
+
+#bibTexBookmarkletButtons button:first-child {
+	width: 100px;
+}
+
+#bibTexBookmarkletButtons button:nth-child(2) {
+	position: absolute;
+	left: calc(50% - 9.25px);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 15.2px;
+}
+
+#bibTexBookmarkletButtons button:last-child {
+	position: absolute;
+	right: 0;
+	width: 100px;
+}
+
+#bibTexBookmarkletClose {
+	text-align: right;
+}
+
+#bibTexBookmarkletStatus {
+	font-size: 1em;
+}
+
+#bibTexBookmarkletData {
+	font-size: .9em;
+}
+
+#bibTexBookmarkletData button {
+	margin-top: .15em;
+}
+
+#bibTexBookmarkletList {
+	padding: .25em 0;
+	margin-left: 1em;
+	list-style-type: disc;
+}
+
+#bibTexBookmarkletList li {
+	margin-bottom: .5em;
+}
+
+.bbtHidden {
+	display: none;
+}
