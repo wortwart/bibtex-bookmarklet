@@ -1,5 +1,9 @@
 var	style, box;
 
+if (localStorage === undefined) {
+	alert('Die für das BibTeX-Bookmarklet notwendige Speichertechnik localStorage funktioniert nicht. Haben Sie eine Webseite geöffnet? Arbeiten Sie mit einem sehr alten Browser?');
+}
+
 if (!bbt.close()) {
 	style = document.querySelector('style');
 	if (!style) {
@@ -15,14 +19,17 @@ box += '<p id="' + bbt.ns + 'Close"><button onclick="bbt.close()">Schließen</bu
 bbt.savedDataQuery();
 
 box += '<div id="' + bbt.ns + 'Form">'
-if (!bbt.savedData) box += bbt.displayForm();
+if (!bbt.savedData || !bbt.bibtexQuery) box += bbt.displayForm();
 box += '</div>'
 
 box += '<div id="' + bbt.ns + 'Status">';
-if (bbt.savedData) box += bbt.status('dataExisting');
-else {
-	if (bbt.bibtexQuery) box += bbt.status('bibtexInPage');
-	else box += bbt.status('noBibtexInPage');
+if (bbt.bibtexQuery) {
+	if (bbt.savedData)
+		box += bbt.status('dataExisting');
+	else
+		box += bbt.status('bibtexInPage');
+} else {
+	box += bbt.status('noBibtexInPage');
 }
 box += '</div>';
 
@@ -31,7 +38,7 @@ box += bbt.datasetOutput();
 box += '</div>';
 
 box += '<section id="' + bbt.ns + 'ListBox" class="bbtHidden">';
-box += '<h3>Alle BibTeX-Datensätze</h3>';
+box += '<h3>Alle BibTeX-Datensätze für ' + location.host + '</h3>';
 box += '<ul id="' + bbt.ns + 'List">';
 bbt.listOutput();
 box += '</ul></section>';
