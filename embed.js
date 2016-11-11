@@ -1,4 +1,4 @@
-var baseURL = '//woerter.de/bibtex/';
+var baseURL = 'https://rawgit.com/wortwart/bibtex-bookmarklet/master/build/ie/';
 var head = document.getElementsByTagName('head')[0];
 if (!document.getElementById('bibtexScript')) {
 	var script = document.createElement('script');
