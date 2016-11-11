@@ -1,4 +1,4 @@
-var baseURL = 'http://woerter.de/bibtex/';
+var baseURL = '//woerter.de/bibtex/';
 var head = document.getElementsByTagName('head')[0];
 if (!document.getElementById('bibtexScript')) {
 	var script = document.createElement('script');
